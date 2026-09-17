@@ -27,6 +27,7 @@ command -v uv >/dev/null 2>&1 || {
 
 # 题库默认安装官方 clings；如有私有镜像，修改这里的 URL 即可
 uv tool install --force \
-    "git+https://github.com/Lingrui-Studio/clings.git"
+    "git+https://ghproxy.net/https://github.com/Lingrui-Studio/clings.git"
 
 clings doctor
+ 

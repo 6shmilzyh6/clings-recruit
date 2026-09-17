@@ -9,8 +9,7 @@
     	int y;
     };
 
-    typedef struct point point_t;
-
+    
     double calc_distance(point_t p1, point_t p2)
     {
     	int dx = p1.x - p2.x;

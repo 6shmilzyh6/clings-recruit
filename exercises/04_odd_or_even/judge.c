@@ -22,8 +22,13 @@ int main(void) {
     int num;
 
     scanf("%d", &num);
+    if (num%2==0){
+        printf ("num %d is even\n",num);
+    }else {
+        printf ("num %d is odd\n",num);
+    }
 
-#error TODO: Use if/else to check num%2==0, print "num %d is even/odd\n". Run "clings hint" for help.
+
 
     return 0;
 }

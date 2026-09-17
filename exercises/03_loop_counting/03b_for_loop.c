@@ -18,10 +18,13 @@
 int main(void) {
     int i;
     int sum = 0;
+    for (i=10;i>=1;i--){
+        printf ("counter = %d\n",i);
 
-#error TODO: Fix this exercise. Run "clings hint" for help.
-
-#error TODO: Fix this exercise. Run "clings hint" for help.
+    } do {i++;
+        sum+=i;
+    }while (i<=9);
+printf ("sum = %d\n",sum);
 
     return 0;
 }

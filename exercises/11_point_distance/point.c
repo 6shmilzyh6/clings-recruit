@@ -15,10 +15,19 @@
 
 #include <math.h>
 #include <stdio.h>
+       typedef struct point{
+        float x;
+        float y;
+       } point_t;
 
-#error TODO: Define struct point {float x; float y;} with typedef. Run "clings hint" for help.
+      float calculate(point_t p1,point_t p2){
+      float dx=p1.x-p2.x;
+      float dy=p1.y-p2.y;
 
-#error TODO: Implement float calculate(point_t p1, point_t p2) for distance. Run "clings hint" for help.
+    return sqrt(dx*dx+dy*dy);
+      }
+
+
 
 int main(void) {
     point_t p1, p2;

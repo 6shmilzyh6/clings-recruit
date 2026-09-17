@@ -1,5 +1,7 @@
 /*
- * Lesson 17: 统计单词
+ * ate==1 && input==0: state=0, words++, 打印 "word %d found!\n"
+ *          然后 for 循环打印 p[0..counter-1] 每个字符，再打印 "\n"
+ *       4. state==Lesson 17: 统计单词
  *
  * 知识点：状态机编程，get_input_type 函数，指针 p 记录单词起始，counter 计长度
  * 参考原课 wordsum.c — 4 个状态转换分支 + 打印每个单词
@@ -7,9 +9,7 @@
  * 任务：实现状态机主循环：
  *       1. state==0 && input==0: 保持 state=0 (连续空白)
  *       2. state==0 && input==1: state=1, p=&buf[i], counter=0, counter++
- *       3. state==1 && input==0: state=0, words++, 打印 "word %d found!\n"
- *          然后 for 循环打印 p[0..counter-1] 每个字符，再打印 "\n"
- *       4. state==1 && input==1: state=1, counter++
+ *       3. st1 && input==1: state=1, counter++
  *       5. 遇到 '\0' 跳出循环
  *       6. 最后打印 "there is %d words found!\n"
  *
@@ -31,8 +31,10 @@ int main(void) {
     int state = 0;
     int i = 0;
     int words = 0;
-    char *p = NULL;
+    char *p = buf;
     int counter = 0;
+    int input=0;
+    char c;
 
     fgets(buf, sizeof(buf), stdin);
     /* 去掉换行 */
@@ -43,9 +45,45 @@ int main(void) {
         }
 
     i = 0;
+     char  *ret=NULL;
+// // ：实现状态机主循环：
+// //  *       1. state==0 && input==0: 保持 state=0 (连续空白)
+//  *       2. state==0 && input==1: state=1, p=&buf[i], counter=0, counter++
+//  *       3. state==1 && input==0: state=0, words++, 打印 "word %d found!\n"
+//  *          然后 for 循环打印 p[0..counter-1] 每个字符，再打印 "\n"
+//  *       4. state==1 && input==1: state=1, counter++
+//  *       5. 遇到 '\0' 跳出循环
+//  *       6. 最后打印 "there is %d words found!\n"
+while ((c=*p++)!='\0'){
+    input=get_input_type(c);
+    if (state==0 && input==1){
+        state =1;
+        ret=p-1;
+        counter =0;
+        counter++;
+    }    else if (state==1&&input==1){
+        counter++;
 
-#error TODO: Implement state machine loop with 4 branches for word counting. Run "clings hint" for help.
+    }else  if(state==1&&input==0)
+{
+    state=0;
+    words++;
+    printf ("word %d found!\n",words);
+     for (int j=0;j<counter;j++){
+        printf("%c",ret[j]);
 
-    printf("there is %d words found!\n", words);
-    return 0;
+     }printf("\n");
+    }
+    
 }
+if (state==1){
+    words++;
+    printf ("word %d found!\n", words);
+        for (int j=0;j<counter;j++){
+            printf ("%c",ret[j]);
+        }printf("\n");
+}
+
+
+printf("there is %d words found!\n", words);
+return 0;}
