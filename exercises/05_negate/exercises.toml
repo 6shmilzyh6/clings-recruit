@@ -1,0 +1,24 @@
+[[exercises]]
+name = "05_negate"
+title = "补码: 用位运算取相反数"
+unit = "binary"
+lesson = 5
+order = 5
+mode = "stdout"
+source = "negate.c"
+hint = '''
+补码中，取相反数可以从按位取反和加一的关系入手。
+考虑零和最小整数这两个边界。
+'''
+
+[[exercises.cases]]
+stdin = "1\n"
+stdout = "-1\n"
+
+[[exercises.cases]]
+stdin = "-7\n"
+stdout = "7\n"
+
+[[exercises.cases]]
+stdin = "0\n"
+stdout = "0\n"

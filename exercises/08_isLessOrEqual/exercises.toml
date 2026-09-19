@@ -1,0 +1,32 @@
+[[exercises]]
+name = "08_isLessOrEqual"
+title = "比较: 用位运算判断小于等于"
+unit = "binary"
+lesson = 8
+order = 8
+mode = "stdout"
+source = "isLessOrEqual.c"
+hint = '''
+先区分 x 与 y 符号不同和符号相同的情况。
+同号时可以观察 y - x 的符号，但要考虑减法溢出。
+'''
+
+[[exercises.cases]]
+stdin = "4 5\n"
+stdout = "1\n"
+
+[[exercises.cases]]
+stdin = "5 4\n"
+stdout = "0\n"
+
+[[exercises.cases]]
+stdin = "-2147483648 2147483647\n"
+stdout = "1\n"
+
+[[exercises.cases]]
+stdin = "2147483647 -2147483648\n"
+stdout = "0\n"
+
+[[exercises.cases]]
+stdin = "-1 -1\n"
+stdout = "1\n"

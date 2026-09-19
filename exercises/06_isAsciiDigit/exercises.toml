@@ -1,0 +1,32 @@
+[[exercises]]
+name = "06_isAsciiDigit"
+title = "范围判断: ASCII 数字字符"
+unit = "binary"
+lesson = 6
+order = 6
+mode = "stdout"
+source = "isAsciiDigit.c"
+hint = '''
+目标范围只有 0x30 到 0x39。尝试用加法构造与边界的差，再结合符号位判断。
+留意 x 可能是任意 32 位有符号整数，不能只考虑 ASCII 范围附近的小数。
+'''
+
+[[exercises.cases]]
+stdin = "53\n"
+stdout = "1\n"
+
+[[exercises.cases]]
+stdin = "48\n"
+stdout = "1\n"
+
+[[exercises.cases]]
+stdin = "57\n"
+stdout = "1\n"
+
+[[exercises.cases]]
+stdin = "58\n"
+stdout = "0\n"
+
+[[exercises.cases]]
+stdin = "5\n"
+stdout = "0\n"

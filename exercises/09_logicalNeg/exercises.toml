@@ -1,0 +1,24 @@
+[[exercises]]
+name = "09_logicalNeg"
+title = "逻辑运算: 不使用 ! 判断零"
+unit = "binary"
+lesson = 9
+order = 9
+mode = "stdout"
+source = "logicalNeg.c"
+hint = '''
+对非零补码整数 x，x 与 -x 至少有一个是负数；零是特殊情况。
+尝试只根据 x 和它的相反数的符号位区分零与非零。
+'''
+
+[[exercises.cases]]
+stdin = "3\n"
+stdout = "0\n"
+
+[[exercises.cases]]
+stdin = "0\n"
+stdout = "1\n"
+
+[[exercises.cases]]
+stdin = "-2147483648\n"
+stdout = "0\n"

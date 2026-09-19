@@ -1,0 +1,24 @@
+[[exercises]]
+name = "03_isTmax"
+title = "补码: 判断最大整数"
+unit = "binary"
+lesson = 3
+order = 3
+mode = "stdout"
+source = "isTmax.c"
+hint = '''
+思考最大补码整数加一之后会变成什么，再观察这个结果与原数之间的关系。
+注意检查另一个特殊位模式：全 1 的数。
+'''
+
+[[exercises.cases]]
+stdin = "2147483647\n"
+stdout = "1\n"
+
+[[exercises.cases]]
+stdin = "-1\n"
+stdout = "0\n"
+
+[[exercises.cases]]
+stdin = "0\n"
+stdout = "0\n"

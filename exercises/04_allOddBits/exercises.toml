@@ -1,0 +1,24 @@
+[[exercises]]
+name = "04_allOddBits"
+title = "掩码: 检查奇数编号位"
+unit = "binary"
+lesson = 4
+order = 4
+mode = "stdout"
+source = "allOddBits.c"
+hint = '''
+先构造一个只在奇数编号位为 1 的掩码，再取出 x 对应的位进行比较。
+掩码常量可以通过重复拼接较小的字节构造。
+'''
+
+[[exercises.cases]]
+stdin = "-1431655766\n"
+stdout = "1\n"
+
+[[exercises.cases]]
+stdin = "-3\n"
+stdout = "0\n"
+
+[[exercises.cases]]
+stdin = "0\n"
+stdout = "0\n"

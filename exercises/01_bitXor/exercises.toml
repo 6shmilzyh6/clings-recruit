@@ -1,0 +1,25 @@
+[[exercises]]
+name = "01_bitXor"
+title = "位运算: 用与非实现异或"
+unit = "binary"
+lesson = 1
+order = 1
+mode = "stdout"
+source = "bitXor.c"
+hint = '''
+先写出两个输入位的真值表，区分“两个位不同”和“两个位相同”。
+可以分别构造 x 为 1、y 为 0，以及 x 为 0、y 为 1 的情况，再组合结果。
+只能使用按位取反和按位与。
+'''
+
+[[exercises.cases]]
+stdin = "4 5\n"
+stdout = "1\n"
+
+[[exercises.cases]]
+stdin = "7 7\n"
+stdout = "0\n"
+
+[[exercises.cases]]
+stdin = "-1 0\n"
+stdout = "-1\n"

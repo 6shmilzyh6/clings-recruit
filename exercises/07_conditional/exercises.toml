@@ -1,0 +1,24 @@
+[[exercises]]
+name = "07_conditional"
+title = "逻辑模拟: 位运算实现条件选择"
+unit = "binary"
+lesson = 7
+order = 7
+mode = "stdout"
+source = "conditional.c"
+hint = '''
+把 x 转换成一个只有 0 或 1 的值，再把它扩展成全 0 或全 1 的掩码。
+最后用掩码从 y 和 z 中选出一个值。
+'''
+
+[[exercises.cases]]
+stdin = "2 4 5\n"
+stdout = "4\n"
+
+[[exercises.cases]]
+stdin = "0 4 5\n"
+stdout = "5\n"
+
+[[exercises.cases]]
+stdin = "-1 -2147483648 2147483647\n"
+stdout = "-2147483648\n"

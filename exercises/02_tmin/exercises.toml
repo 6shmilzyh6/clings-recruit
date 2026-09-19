@@ -1,0 +1,16 @@
+[[exercises]]
+name = "02_tmin"
+title = "补码: 构造最小整数"
+unit = "binary"
+lesson = 2
+order = 2
+mode = "stdout"
+source = "tmin.c"
+hint = '''
+观察最小补码整数的二进制形式：只有最高位为 1，其余位为 0。
+考虑如何从允许使用的小整数和移位操作构造它。
+'''
+
+[[exercises.cases]]
+stdin = ""
+stdout = "-2147483648\n"
